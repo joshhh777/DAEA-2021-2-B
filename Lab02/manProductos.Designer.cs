@@ -38,23 +38,23 @@ namespace Lab02
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtClase = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtSActual = new System.Windows.Forms.TextBox();
+            this.txtSMinimo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -149,26 +149,26 @@ namespace Lab02
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
             this.dtpFecha.TabIndex = 54;
             // 
-            // txtApellido
+            // txtPrecio
             // 
-            this.txtApellido.Location = new System.Drawing.Point(421, 52);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(130, 20);
-            this.txtApellido.TabIndex = 52;
+            this.txtPrecio.Location = new System.Drawing.Point(421, 52);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(130, 20);
+            this.txtPrecio.TabIndex = 52;
             // 
-            // txtDireccion
+            // txtDescripcion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(96, 144);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(482, 20);
-            this.txtDireccion.TabIndex = 51;
+            this.txtDescripcion.Location = new System.Drawing.Point(96, 144);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(482, 20);
+            this.txtDescripcion.TabIndex = 51;
             // 
-            // txtTelefono
+            // txtClase
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(96, 66);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefono.TabIndex = 50;
+            this.txtClase.Location = new System.Drawing.Point(96, 66);
+            this.txtClase.Name = "txtClase";
+            this.txtClase.Size = new System.Drawing.Size(100, 20);
+            this.txtClase.TabIndex = 50;
             // 
             // txtNombre
             // 
@@ -177,12 +177,12 @@ namespace Lab02
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 49;
             // 
-            // txtDNI
+            // txtCodigo
             // 
-            this.txtDNI.Location = new System.Drawing.Point(96, 16);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(85, 20);
-            this.txtDNI.TabIndex = 48;
+            this.txtCodigo.Location = new System.Drawing.Point(96, 16);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(85, 20);
+            this.txtCodigo.TabIndex = 48;
             // 
             // label7
             // 
@@ -226,61 +226,41 @@ namespace Lab02
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtSActual);
+            this.panel1.Controls.Add(this.txtSMinimo);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtModelo);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMarca);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtTelefono);
-            this.panel1.Controls.Add(this.txtDireccion);
+            this.panel1.Controls.Add(this.txtClase);
+            this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtDNI);
+            this.panel1.Controls.Add(this.txtCodigo);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 182);
             this.panel1.TabIndex = 63;
             // 
-            // label8
+            // txtSActual
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(47, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 15);
-            this.label8.TabIndex = 57;
-            this.label8.Text = "Marca:";
+            this.txtSActual.Location = new System.Drawing.Point(409, 92);
+            this.txtSActual.Name = "txtSActual";
+            this.txtSActual.Size = new System.Drawing.Size(100, 20);
+            this.txtSActual.TabIndex = 64;
             // 
-            // textBox1
+            // txtSMinimo
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 58;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(409, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 60;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(7, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 15);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "Stock Mínimo:";
+            this.txtSMinimo.Location = new System.Drawing.Point(97, 118);
+            this.txtSMinimo.Name = "txtSMinimo";
+            this.txtSMinimo.Size = new System.Drawing.Size(100, 20);
+            this.txtSMinimo.TabIndex = 63;
             // 
             // label11
             // 
@@ -292,19 +272,39 @@ namespace Lab02
             this.label11.TabIndex = 62;
             this.label11.Text = "Stock Actual:";
             // 
-            // textBox3
+            // label10
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 63;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(7, 120);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 15);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "Stock Mínimo:";
             // 
-            // textBox4
+            // txtModelo
             // 
-            this.textBox4.Location = new System.Drawing.Point(409, 92);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 64;
+            this.txtModelo.Location = new System.Drawing.Point(409, 66);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(170, 20);
+            this.txtModelo.TabIndex = 60;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Location = new System.Drawing.Point(96, 92);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.TabIndex = 58;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(47, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 15);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Marca:";
             // 
             // manProductos
             // 
@@ -317,7 +317,7 @@ namespace Lab02
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "manProductos";
@@ -341,22 +341,22 @@ namespace Lab02
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtClase;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSActual;
+        private System.Windows.Forms.TextBox txtSMinimo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label8;
     }
 }

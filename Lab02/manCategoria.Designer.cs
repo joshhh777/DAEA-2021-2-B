@@ -37,16 +37,16 @@ namespace Lab02
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -131,19 +131,19 @@ namespace Lab02
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
             this.dtpFecha.TabIndex = 34;
             // 
-            // txtDireccion
+            // txtDescripcion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(109, 107);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(482, 20);
-            this.txtDireccion.TabIndex = 31;
+            this.txtDescripcion.Location = new System.Drawing.Point(109, 107);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(482, 20);
+            this.txtDescripcion.TabIndex = 31;
             // 
-            // txtTelefono
+            // txtTipo
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(109, 78);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefono.TabIndex = 30;
+            this.txtTipo.Location = new System.Drawing.Point(109, 78);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.TabIndex = 30;
             // 
             // txtNombre
             // 
@@ -152,12 +152,12 @@ namespace Lab02
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 29;
             // 
-            // txtDNI
+            // txtCodigo
             // 
-            this.txtDNI.Location = new System.Drawing.Point(109, 26);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(85, 20);
-            this.txtDNI.TabIndex = 28;
+            this.txtCodigo.Location = new System.Drawing.Point(109, 26);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(85, 20);
+            this.txtCodigo.TabIndex = 28;
             // 
             // label5
             // 
@@ -191,7 +191,7 @@ namespace Lab02
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtProducto);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
@@ -202,6 +202,13 @@ namespace Lab02
             this.panel1.Size = new System.Drawing.Size(618, 136);
             this.panel1.TabIndex = 43;
             // 
+            // txtProducto
+            // 
+            this.txtProducto.Location = new System.Drawing.Point(409, 41);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(162, 20);
+            this.txtProducto.TabIndex = 44;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -211,13 +218,6 @@ namespace Lab02
             this.label6.Size = new System.Drawing.Size(59, 15);
             this.label6.TabIndex = 37;
             this.label6.Text = "Producto:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(409, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 44;
             // 
             // manCategoria
             // 
@@ -230,10 +230,10 @@ namespace Lab02
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "manCategoria";
@@ -256,15 +256,15 @@ namespace Lab02
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label6;
     }
 }
