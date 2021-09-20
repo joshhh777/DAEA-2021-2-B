@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Lab04
+namespace Lab03
 {
     public partial class dbCon : Form
     {
@@ -103,6 +103,12 @@ namespace Lab04
                 txtUsuario.Enabled = true;
                 txtContraseña.Enabled = true;
             }
+        }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            Persona persona = new Persona(con);
+            persona.Show();
         }
     }
 }

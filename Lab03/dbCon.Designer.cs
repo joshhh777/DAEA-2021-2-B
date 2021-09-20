@@ -1,5 +1,5 @@
 ﻿
-namespace Lab04
+namespace Lab03
 {
     partial class dbCon
     {
@@ -41,6 +41,7 @@ namespace Lab04
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.MaskedTextBox();
             this.btnConectar = new System.Windows.Forms.Button();
+            this.btnPersona = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -154,11 +155,22 @@ namespace Lab04
             this.btnConectar.UseVisualStyleBackColor = true;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
+            // btnPersona
+            // 
+            this.btnPersona.Location = new System.Drawing.Point(135, 181);
+            this.btnPersona.Name = "btnPersona";
+            this.btnPersona.Size = new System.Drawing.Size(75, 23);
+            this.btnPersona.TabIndex = 14;
+            this.btnPersona.Text = "Persona";
+            this.btnPersona.UseVisualStyleBackColor = true;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
+            // 
             // dbCon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 190);
+            this.ClientSize = new System.Drawing.Size(362, 208);
+            this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.btnDesconectar);
@@ -192,6 +204,7 @@ namespace Lab04
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.MaskedTextBox txtContraseña;
         private System.Windows.Forms.Button btnConectar;
+        private System.Windows.Forms.Button btnPersona;
     }
 }
 
