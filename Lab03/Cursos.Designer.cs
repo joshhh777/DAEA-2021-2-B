@@ -1,7 +1,7 @@
 ﻿
 namespace Lab03
 {
-    partial class Persona
+    partial class Cursos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,66 +29,64 @@ namespace Lab03
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtPersona = new System.Windows.Forms.TextBox();
             this.dvgLista = new System.Windows.Forms.DataGridView();
+            this.txtCurso = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgLista)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnListar
+            // dvgLista
             // 
-            this.btnListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnListar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(12, 13);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 0;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = false;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.dvgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgLista.Location = new System.Drawing.Point(12, 50);
+            this.dvgLista.Name = "dvgLista";
+            this.dvgLista.Size = new System.Drawing.Size(323, 303);
+            this.dvgLista.TabIndex = 7;
+            // 
+            // txtCurso
+            // 
+            this.txtCurso.Location = new System.Drawing.Point(124, 15);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(130, 20);
+            this.txtCurso.TabIndex = 6;
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnBuscar.Location = new System.Drawing.Point(260, 16);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscar.Location = new System.Drawing.Point(260, 15);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtPersona
+            // btnListar
             // 
-            this.txtPersona.Location = new System.Drawing.Point(124, 16);
-            this.txtPersona.Name = "txtPersona";
-            this.txtPersona.Size = new System.Drawing.Size(130, 20);
-            this.txtPersona.TabIndex = 2;
+            this.btnListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(12, 12);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.TabIndex = 4;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // dvgLista
-            // 
-            this.dvgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgLista.Location = new System.Drawing.Point(12, 51);
-            this.dvgLista.Name = "dvgLista";
-            this.dvgLista.Size = new System.Drawing.Size(323, 303);
-            this.dvgLista.TabIndex = 3;
-            // 
-            // Persona
+            // Cursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 366);
+            this.ClientSize = new System.Drawing.Size(350, 365);
             this.Controls.Add(this.dvgLista);
-            this.Controls.Add(this.txtPersona);
+            this.Controls.Add(this.txtCurso);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnListar);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Persona";
-            this.Text = "Persona";
-            this.Load += new System.EventHandler(this.Persona_Load);
+            this.Name = "Cursos";
+            this.Text = "Cursoscs";
             ((System.ComponentModel.ISupportInitialize)(this.dvgLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,9 +95,9 @@ namespace Lab03
 
         #endregion
 
-        private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtPersona;
         private System.Windows.Forms.DataGridView dvgLista;
+        private System.Windows.Forms.TextBox txtCurso;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnListar;
     }
 }

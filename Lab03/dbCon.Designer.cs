@@ -42,6 +42,7 @@ namespace Lab03
             this.txtContraseña = new System.Windows.Forms.MaskedTextBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnPersona = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -117,23 +118,28 @@ namespace Lab03
             // 
             // btnEstado
             // 
+            this.btnEstado.BackColor = System.Drawing.Color.Blue;
+            this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstado.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEstado.Location = new System.Drawing.Point(135, 152);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(75, 23);
             this.btnEstado.TabIndex = 10;
             this.btnEstado.Text = "Estado";
-            this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.UseVisualStyleBackColor = false;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // btnDesconectar
             // 
+            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDesconectar.Enabled = false;
+            this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.Location = new System.Drawing.Point(216, 152);
             this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(81, 23);
+            this.btnDesconectar.Size = new System.Drawing.Size(100, 23);
             this.btnDesconectar.TabIndex = 11;
             this.btnDesconectar.Text = "Desconectar";
-            this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.UseVisualStyleBackColor = false;
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // txtContraseña
@@ -147,16 +153,19 @@ namespace Lab03
             // 
             // btnConectar
             // 
+            this.btnConectar.BackColor = System.Drawing.Color.Lime;
+            this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConectar.Location = new System.Drawing.Point(54, 152);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(75, 23);
             this.btnConectar.TabIndex = 13;
             this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // btnPersona
             // 
+            this.btnPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersona.Location = new System.Drawing.Point(135, 181);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(75, 23);
@@ -165,11 +174,23 @@ namespace Lab03
             this.btnPersona.UseVisualStyleBackColor = true;
             this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
             // 
+            // btnCursos
+            // 
+            this.btnCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.Location = new System.Drawing.Point(216, 181);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(100, 23);
+            this.btnCursos.TabIndex = 15;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
             // dbCon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 208);
+            this.Controls.Add(this.btnCursos);
             this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.txtContraseña);
@@ -205,6 +226,7 @@ namespace Lab03
         private System.Windows.Forms.MaskedTextBox txtContraseña;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Button btnPersona;
+        private System.Windows.Forms.Button btnCursos;
     }
 }
 
