@@ -1,7 +1,7 @@
 ﻿
 namespace Lab05
 {
-    partial class Form1
+    partial class frmPerson
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,15 +39,15 @@ namespace Lab05
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtPersonID = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.dtpContrato = new System.Windows.Forms.DateTimePicker();
             this.dtpInscripcion = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,6 +103,7 @@ namespace Lab05
             this.btnListar.TabIndex = 5;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnBuscar
             // 
@@ -140,19 +141,19 @@ namespace Lab05
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // txtCodigo
+            // txtPersonID
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(19, 43);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(67, 20);
-            this.txtCodigo.TabIndex = 10;
+            this.txtPersonID.Location = new System.Drawing.Point(19, 43);
+            this.txtPersonID.Name = "txtPersonID";
+            this.txtPersonID.Size = new System.Drawing.Size(67, 20);
+            this.txtPersonID.TabIndex = 10;
             // 
-            // txtNombre
+            // txtFirstName
             // 
-            this.txtNombre.Location = new System.Drawing.Point(19, 99);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(127, 20);
-            this.txtNombre.TabIndex = 11;
+            this.txtFirstName.Location = new System.Drawing.Point(19, 99);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(127, 20);
+            this.txtFirstName.TabIndex = 11;
             // 
             // dtpContrato
             // 
@@ -172,55 +173,56 @@ namespace Lab05
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.txtLastName);
             this.groupBox1.Controls.Add(this.dtpInscripcion);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpContrato);
-            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.txtPersonID);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtFirstName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 197);
+            this.groupBox1.Size = new System.Drawing.Size(318, 195);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Persona";
             // 
-            // txtApellido
+            // txtLastName
             // 
-            this.txtApellido.Location = new System.Drawing.Point(177, 99);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(127, 20);
-            this.txtApellido.TabIndex = 15;
+            this.txtLastName.Location = new System.Drawing.Point(177, 99);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(127, 20);
+            this.txtLastName.TabIndex = 15;
             // 
-            // dgvDatos
+            // dgvLista
             // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(9, 213);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(431, 215);
-            this.dgvDatos.TabIndex = 16;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Location = new System.Drawing.Point(12, 218);
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.Size = new System.Drawing.Size(431, 215);
+            this.dgvLista.TabIndex = 16;
             // 
-            // Form1
+            // frmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 445);
-            this.Controls.Add(this.dgvDatos);
+            this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "frmPerson";
             this.Text = "Mantenimiento de Personas";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,13 +239,13 @@ namespace Lab05
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtPersonID;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.DateTimePicker dtpContrato;
         private System.Windows.Forms.DateTimePicker dtpInscripcion;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.DataGridView dgvLista;
     }
 }
 
