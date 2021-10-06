@@ -1,5 +1,5 @@
 ﻿
-namespace labb05
+namespace Lab05
 {
     partial class frmPerson
     {
@@ -33,7 +33,7 @@ namespace labb05
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBuscarCodigo = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -46,6 +46,8 @@ namespace labb05
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnBuscarNombre = new System.Windows.Forms.Button();
+            this.btnBuscarApellido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,15 +55,15 @@ namespace labb05
             // dgvLista
             // 
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(12, 218);
+            this.dgvLista.Location = new System.Drawing.Point(12, 243);
             this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(431, 215);
+            this.dgvLista.Size = new System.Drawing.Size(431, 190);
             this.dgvLista.TabIndex = 23;
-            this.dgvLista.SelectionChanged += new System.EventHandler(this.dgvLista_SelectionChanged);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(356, 158);
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(358, 142);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 21;
@@ -71,7 +73,8 @@ namespace labb05
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(356, 129);
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(358, 113);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 20;
@@ -81,7 +84,8 @@ namespace labb05
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(356, 100);
+            this.btnInsertar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Location = new System.Drawing.Point(358, 84);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
             this.btnInsertar.TabIndex = 19;
@@ -89,19 +93,21 @@ namespace labb05
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
-            // btnBuscar
+            // btnBuscarCodigo
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(356, 71);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 18;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscarCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCodigo.Location = new System.Drawing.Point(13, 213);
+            this.btnBuscarCodigo.Name = "btnBuscarCodigo";
+            this.btnBuscarCodigo.Size = new System.Drawing.Size(113, 23);
+            this.btnBuscarCodigo.TabIndex = 18;
+            this.btnBuscarCodigo.Text = "Buscar por Codigo";
+            this.btnBuscarCodigo.UseVisualStyleBackColor = true;
+            this.btnBuscarCodigo.Click += new System.EventHandler(this.btnBuscarCodigo_Click);
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(356, 42);
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(358, 55);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 17;
@@ -210,16 +216,40 @@ namespace labb05
             this.label4.TabIndex = 3;
             this.label4.Text = "Contrato:";
             // 
+            // btnBuscarNombre
+            // 
+            this.btnBuscarNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarNombre.Location = new System.Drawing.Point(132, 213);
+            this.btnBuscarNombre.Name = "btnBuscarNombre";
+            this.btnBuscarNombre.Size = new System.Drawing.Size(127, 23);
+            this.btnBuscarNombre.TabIndex = 24;
+            this.btnBuscarNombre.Text = "Buscar por Nombre";
+            this.btnBuscarNombre.UseVisualStyleBackColor = true;
+            this.btnBuscarNombre.Click += new System.EventHandler(this.btnBuscarNombre_Click);
+            // 
+            // btnBuscarApellido
+            // 
+            this.btnBuscarApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarApellido.Location = new System.Drawing.Point(265, 213);
+            this.btnBuscarApellido.Name = "btnBuscarApellido";
+            this.btnBuscarApellido.Size = new System.Drawing.Size(125, 23);
+            this.btnBuscarApellido.TabIndex = 25;
+            this.btnBuscarApellido.Text = "Buscar por Apellido";
+            this.btnBuscarApellido.UseVisualStyleBackColor = true;
+            this.btnBuscarApellido.Click += new System.EventHandler(this.btnBuscarApellido_Click);
+            // 
             // frmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 450);
+            this.Controls.Add(this.btnBuscarApellido);
+            this.Controls.Add(this.btnBuscarNombre);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnInsertar);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnBuscarCodigo);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPerson";
@@ -238,7 +268,7 @@ namespace labb05
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarCodigo;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtLastName;
@@ -251,6 +281,8 @@ namespace labb05
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBuscarNombre;
+        private System.Windows.Forms.Button btnBuscarApellido;
     }
 }
 
