@@ -18,7 +18,11 @@ namespace Lab05
         {
             InitializeComponent();
         }
-
+        private void frmPerson_Load(object sender, EventArgs e)
+        {
+            String str = "Server=LAPTOP-4M108N9M\\SQLEXPRESS;DataBase=School;Integrated Security=true;";
+            con = new SqlConnection(str);
+        }
         private void btnListar_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -191,10 +195,16 @@ namespace Lab05
             con.Close();
         }
 
-        private void frmPerson_Load(object sender, EventArgs e)
+        private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
-            String str = "Server=LAPTOP-4M108N9M\\SQLEXPRESS;DataBase=School;Integrated Security=true;";
-            con = new SqlConnection(str);
+            if(dgvLista.SelectedRows.Count > 0)
+            {
+                txtPersonID.Text = dgvLista.SelectedRows[0].Cells[0].Value.ToString();
+                txtLastName.Text = dgvLista.SelectedRows[0].Cells[1].Value.ToString();
+                txtFirstName.Text = dgvLista.SelectedRows[0].Cells[2].Value.ToString();
+                txtHireDate.Text = dgvLista.SelectedRows[0].Cells[3].Value.ToString();
+                txtEnrollmentDate.Text = dgvLista.SelectedRows[0].Cells[4].Value.ToString();
+            }
         }
     }
 }

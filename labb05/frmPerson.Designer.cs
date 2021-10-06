@@ -59,6 +59,7 @@ namespace Lab05
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.Size = new System.Drawing.Size(431, 190);
             this.dgvLista.TabIndex = 23;
+            this.dgvLista.SelectionChanged += new System.EventHandler(this.dgvLista_SelectionChanged);
             // 
             // btnEliminar
             // 
