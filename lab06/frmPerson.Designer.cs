@@ -1,5 +1,5 @@
 ﻿
-namespace labb05
+namespace lab06
 {
     partial class frmPerson
     {
@@ -46,6 +46,8 @@ namespace labb05
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnOrdenarApellido = new System.Windows.Forms.Button();
+            this.btnBuscarCodigo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,10 +55,10 @@ namespace labb05
             // dgvLista
             // 
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(12, 218);
+            this.dgvLista.Location = new System.Drawing.Point(12, 248);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.Size = new System.Drawing.Size(431, 215);
-            this.dgvLista.TabIndex = 23;
+            this.dgvLista.TabIndex = 30;
             this.dgvLista.SelectionChanged += new System.EventHandler(this.dgvLista_SelectionChanged);
             // 
             // btnEliminar
@@ -64,7 +66,7 @@ namespace labb05
             this.btnEliminar.Location = new System.Drawing.Point(356, 158);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.TabIndex = 28;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -74,7 +76,7 @@ namespace labb05
             this.btnModificar.Location = new System.Drawing.Point(356, 129);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 20;
+            this.btnModificar.TabIndex = 27;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -84,7 +86,7 @@ namespace labb05
             this.btnInsertar.Location = new System.Drawing.Point(356, 100);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
-            this.btnInsertar.TabIndex = 19;
+            this.btnInsertar.TabIndex = 26;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
@@ -94,17 +96,16 @@ namespace labb05
             this.btnBuscar.Location = new System.Drawing.Point(356, 71);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.TabIndex = 25;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnListar
             // 
             this.btnListar.Location = new System.Drawing.Point(356, 42);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 17;
+            this.btnListar.TabIndex = 24;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
@@ -124,7 +125,7 @@ namespace labb05
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(318, 195);
-            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Persona";
             // 
@@ -210,11 +211,33 @@ namespace labb05
             this.label4.TabIndex = 3;
             this.label4.Text = "Contrato:";
             // 
+            // btnOrdenarApellido
+            // 
+            this.btnOrdenarApellido.Location = new System.Drawing.Point(12, 213);
+            this.btnOrdenarApellido.Name = "btnOrdenarApellido";
+            this.btnOrdenarApellido.Size = new System.Drawing.Size(127, 29);
+            this.btnOrdenarApellido.TabIndex = 31;
+            this.btnOrdenarApellido.Text = "Ordenar por Apellido";
+            this.btnOrdenarApellido.UseVisualStyleBackColor = true;
+            this.btnOrdenarApellido.Click += new System.EventHandler(this.btnOrdenarApellido_Click);
+            // 
+            // btnBuscarCodigo
+            // 
+            this.btnBuscarCodigo.Location = new System.Drawing.Point(145, 213);
+            this.btnBuscarCodigo.Name = "btnBuscarCodigo";
+            this.btnBuscarCodigo.Size = new System.Drawing.Size(127, 29);
+            this.btnBuscarCodigo.TabIndex = 32;
+            this.btnBuscarCodigo.Text = "Buscar por Codigo";
+            this.btnBuscarCodigo.UseVisualStyleBackColor = true;
+            this.btnBuscarCodigo.Click += new System.EventHandler(this.btnBuscarCodigo_Click);
+            // 
             // frmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 450);
+            this.ClientSize = new System.Drawing.Size(457, 475);
+            this.Controls.Add(this.btnBuscarCodigo);
+            this.Controls.Add(this.btnOrdenarApellido);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -251,6 +274,8 @@ namespace labb05
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnOrdenarApellido;
+        private System.Windows.Forms.Button btnBuscarCodigo;
     }
 }
 
