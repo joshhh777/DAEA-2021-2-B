@@ -1,5 +1,5 @@
 ﻿
-namespace lab06
+namespace Lab06
 {
     partial class frmPerson
     {
@@ -48,6 +48,8 @@ namespace lab06
             this.label4 = new System.Windows.Forms.Label();
             this.btnOrdenarApellido = new System.Windows.Forms.Button();
             this.btnBuscarCodigo = new System.Windows.Forms.Button();
+            this.btnBuscarNombre = new System.Windows.Forms.Button();
+            this.btnBuscarApellido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +57,7 @@ namespace lab06
             // dgvLista
             // 
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(12, 248);
+            this.dgvLista.Location = new System.Drawing.Point(12, 283);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.Size = new System.Drawing.Size(431, 215);
             this.dgvLista.TabIndex = 30;
@@ -63,6 +65,7 @@ namespace lab06
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(356, 158);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
@@ -73,6 +76,7 @@ namespace lab06
             // 
             // btnModificar
             // 
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(356, 129);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
@@ -83,6 +87,7 @@ namespace lab06
             // 
             // btnInsertar
             // 
+            this.btnInsertar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.Location = new System.Drawing.Point(356, 100);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
@@ -93,6 +98,7 @@ namespace lab06
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(356, 71);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
@@ -102,6 +108,7 @@ namespace lab06
             // 
             // btnListar
             // 
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(356, 42);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
@@ -213,6 +220,7 @@ namespace lab06
             // 
             // btnOrdenarApellido
             // 
+            this.btnOrdenarApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenarApellido.Location = new System.Drawing.Point(12, 213);
             this.btnOrdenarApellido.Name = "btnOrdenarApellido";
             this.btnOrdenarApellido.Size = new System.Drawing.Size(127, 29);
@@ -223,6 +231,7 @@ namespace lab06
             // 
             // btnBuscarCodigo
             // 
+            this.btnBuscarCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCodigo.Location = new System.Drawing.Point(145, 213);
             this.btnBuscarCodigo.Name = "btnBuscarCodigo";
             this.btnBuscarCodigo.Size = new System.Drawing.Size(127, 29);
@@ -231,11 +240,36 @@ namespace lab06
             this.btnBuscarCodigo.UseVisualStyleBackColor = true;
             this.btnBuscarCodigo.Click += new System.EventHandler(this.btnBuscarCodigo_Click);
             // 
+            // btnBuscarNombre
+            // 
+            this.btnBuscarNombre.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnBuscarNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarNombre.Location = new System.Drawing.Point(278, 213);
+            this.btnBuscarNombre.Name = "btnBuscarNombre";
+            this.btnBuscarNombre.Size = new System.Drawing.Size(127, 29);
+            this.btnBuscarNombre.TabIndex = 33;
+            this.btnBuscarNombre.Text = "Buscar por Nombre";
+            this.btnBuscarNombre.UseVisualStyleBackColor = true;
+            this.btnBuscarNombre.Click += new System.EventHandler(this.btnBuscarNombre_Click);
+            // 
+            // btnBuscarApellido
+            // 
+            this.btnBuscarApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarApellido.Location = new System.Drawing.Point(12, 248);
+            this.btnBuscarApellido.Name = "btnBuscarApellido";
+            this.btnBuscarApellido.Size = new System.Drawing.Size(127, 29);
+            this.btnBuscarApellido.TabIndex = 34;
+            this.btnBuscarApellido.Text = "Buscar por Apellido";
+            this.btnBuscarApellido.UseVisualStyleBackColor = true;
+            this.btnBuscarApellido.Click += new System.EventHandler(this.btnBuscarApellido_Click);
+            // 
             // frmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 475);
+            this.ClientSize = new System.Drawing.Size(457, 510);
+            this.Controls.Add(this.btnBuscarApellido);
+            this.Controls.Add(this.btnBuscarNombre);
             this.Controls.Add(this.btnBuscarCodigo);
             this.Controls.Add(this.btnOrdenarApellido);
             this.Controls.Add(this.dgvLista);
@@ -276,6 +310,8 @@ namespace lab06
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOrdenarApellido;
         private System.Windows.Forms.Button btnBuscarCodigo;
+        private System.Windows.Forms.Button btnBuscarNombre;
+        private System.Windows.Forms.Button btnBuscarApellido;
     }
 }
 

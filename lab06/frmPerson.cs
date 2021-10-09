@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace lab06
+namespace Lab06
 {
     public partial class frmPerson : Form
     {
@@ -20,7 +20,6 @@ namespace lab06
         {
             InitializeComponent();
         }
-
         private void frmPerson_Load(object sender, EventArgs e)
         {
             String str = "Server=LAPTOP-4M108N9M\\SQLEXPRESS;DataBase=School;Integrated Security=true;";
@@ -127,30 +126,37 @@ namespace lab06
 
         private void dgvLista_SelectionChanged(object sender, EventArgs e)
         {
-            txtPersonID.Text = dgvLista.SelectedRows[0].Cells[0].Value.ToString();
-            txtLastName.Text = dgvLista.SelectedRows[0].Cells[1].Value.ToString();
-            txtFirstName.Text = dgvLista.SelectedRows[0].Cells[2].Value.ToString();
+            if(dgvLista.SelectedRows.Count > 0)
+            {
+                txtPersonID.Text = dgvLista.SelectedRows[0].Cells[0].Value.ToString();
+                txtFirstName.Text = dgvLista.SelectedRows[0].Cells[2].Value.ToString();
+                txtLastName.Text = dgvLista.SelectedRows[0].Cells[1].Value.ToString();
 
-            string hireDate = dgvLista.SelectedRows[0].Cells[3].Value.ToString();
-            if (String.IsNullOrEmpty(hireDate))
-            {
-                txtHireDate.Checked = false;
+                string hiredate = dgvLista.SelectedRows[0].Cells[3].Value.ToString();
+                if (String.IsNullOrEmpty(hiredate))
+                    txtHireDate.Checked = false;
+                else
+                    txtHireDate.Text = hiredate;
+                string enrollmentdate = dgvLista.SelectedRows[0].Cells[4].Value.ToString();
+                if (String.IsNullOrEmpty(enrollmentdate))
+                    txtEnrollmentDate.Checked = false;
+                else
+                    txtEnrollmentDate.Text = enrollmentdate;
             }
-            else
-            {
-                txtHireDate.Text = hireDate;
-            }
+        }
 
-            string enrollmentDate = dgvLista.SelectedRows[0].Cells[4].Value.ToString();
-            if (String.IsNullOrEmpty(enrollmentDate))
-            {
-                txtHireDate.Checked = false;
-            }
-            else
-            {
-                txtHireDate.Text = enrollmentDate;
-            }
- 
-    }
+        private void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "FirstName = '" + txtFirstName.Text + "'";
+            dgvLista.DataSource = dv;
+        }
+
+        private void btnBuscarApellido_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "LastName = '" + txtLastName.Text + "'";
+            dgvLista.DataSource = dv;
+        }
     }
 }
