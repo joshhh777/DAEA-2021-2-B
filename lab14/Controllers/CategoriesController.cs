@@ -126,5 +126,34 @@ namespace lab14.Controllers
             }
         }
 
+        public ActionResult EditProducts(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Products ProductsEditar = Contexto.Products.Find(id);
+            if (ProductsEditar == null)
+                return HttpNotFound();
+
+            return View(ProductsEditar);
+        }
+        [HttpPost]
+        public ActionResult EditProducts(Products ProductsEditar)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Contexto.Entry(ProductsEditar).State = EntityState.Modified;
+                    Contexto.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(ProductsEditar);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
     }
 }
