@@ -1,0 +1,33 @@
+﻿@model Practica4.Prestamos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<h3>¿Desea eliminar el registro?</h3>
+<fieldset>
+    <legend>Prestamos</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.IdPrestamo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdLibro)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.IdUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FecPrestamo)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.FecDevolucion)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" />
+        @Html.ActionLink("Regresar al listado", "Index")
+    </p>
+}
